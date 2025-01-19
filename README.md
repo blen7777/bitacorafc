@@ -64,3 +64,20 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Aditional steps sail and composer for linux (Windows)
+docker run --rm \
+  -u "$(id -u):$(id -g)" \
+  -v "$(pwd):/var/www/html" \
+  -w /var/www/html \
+  laravelsail/php83-composer:latest \
+  composer install --ignore-platform-reqs
+
+## Key geneartte
+sail artisan key:generate
+
+## Comandos Sail
+./vendor/bin/sail up -d
+./vendor/bin/sail up -down
+
