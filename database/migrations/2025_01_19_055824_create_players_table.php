@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name'); 
             $table->string('position');
-            $table->string('phone'); 
+            $table->string('phone')->nullable(); 
             $table->enum('status', ['suspended', 'active', 'inactive']); 
             $table->date('birth_date'); 
             $table->foreignId('team_id')->constrained()->onDelete('cascade'); 

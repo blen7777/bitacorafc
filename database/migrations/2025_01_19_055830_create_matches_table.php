@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('match_date'); 
             $table->time('match_time'); 
             $table->string('location'); 
-            $table->double('guarantee');
+            $table->double('guarantee')->nullable(); 
             $table->enum('status', ['scheduled', 'played', 'cancelled']); 
             $table->timestamps();
         });
